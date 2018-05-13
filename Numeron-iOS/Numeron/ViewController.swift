@@ -6,6 +6,7 @@
 //  Copyright © 2018 Codingpotato. All rights reserved.
 //
 
+import CoreML
 import UIKit
 
 private let IMAGE_SIZE = 28
@@ -14,6 +15,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var canvasView: CanvasView!
+    
+    private let model = MNISTModel()
     
     @IBAction func evaluateButtonPressed(_ sender: Any) {
         UIGraphicsBeginImageContext(canvasView.frame.size)
@@ -47,9 +50,15 @@ class ViewController: UIViewController {
     private func evaluateData(_ data: [Double]) -> Int {
         precondition(data.count == IMAGE_SIZE * IMAGE_SIZE)
         
-        //print(data)
+        let array = try! MLMultiArray(shape: [1, NSNumber(value: IMAGE_SIZE), NSNumber(value: IMAGE_SIZE)], dataType: .double)
+        for row in 0..<IMAGE_SIZE {
+            for col in 0..<IMAGE_SIZE {
+                array[[0, NSNumber(value: row), NSNumber(value: col)]] = NSNumber(value: data[row * IMAGE_SIZE + col])
+            }
+        }
         
-        return 0
+        let result = try! model.prediction(net__input__0: array)
+        return result.eval__result_alt__0[0].intValue
     }
     
 }

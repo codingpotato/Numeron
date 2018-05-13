@@ -32,7 +32,7 @@ class CanvasView: UIView {
         layer.addSublayer(canvasLayer)
         canvasLayer.frame = layer.bounds
         canvasLayer.strokeColor = UIColor.white.cgColor
-        canvasLayer.lineWidth = bounds.size.width / 12
+        canvasLayer.lineWidth = bounds.size.width / 15
         canvasLayer.lineCap = kCALineCapRound
         canvasLayer.lineJoin = kCALineJoinRound
         canvasLayer.path = canvasPath

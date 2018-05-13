@@ -15,6 +15,7 @@
 		2C637FBA20A696CA003C5314 /* NumeronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C637FB920A696CA003C5314 /* NumeronTests.swift */; };
 		2C637FC520A696CA003C5314 /* NumeronUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C637FC420A696CA003C5314 /* NumeronUITests.swift */; };
 		2C637FD320A697F4003C5314 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C637FD220A697F4003C5314 /* CanvasView.swift */; };
+		8CCA4D3620A85B57004D0A47 /* MNISTModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA4D3520A85B57004D0A47 /* MNISTModel.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C637FC420A696CA003C5314 /* NumeronUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumeronUITests.swift; sourceTree = "<group>"; };
 		2C637FC620A696CA003C5314 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C637FD220A697F4003C5314 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		8CCA4D3520A85B57004D0A47 /* MNISTModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MNISTModel.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +101,14 @@
 		2C637FA320A696C9003C5314 /* Numeron */ = {
 			isa = PBXGroup;
 			children = (
+				8CCA4D3520A85B57004D0A47 /* MNISTModel.mlmodel */,
+				2C637FB020A696CA003C5314 /* Info.plist */,
 				2C637FA420A696C9003C5314 /* AppDelegate.swift */,
+				2C637FD220A697F4003C5314 /* CanvasView.swift */,
 				2C637FA620A696C9003C5314 /* ViewController.swift */,
-				2C637FA820A696C9003C5314 /* Main.storyboard */,
 				2C637FAB20A696CA003C5314 /* Assets.xcassets */,
 				2C637FAD20A696CA003C5314 /* LaunchScreen.storyboard */,
-				2C637FB020A696CA003C5314 /* Info.plist */,
-				2C637FD220A697F4003C5314 /* CanvasView.swift */,
+				2C637FA820A696C9003C5314 /* Main.storyboard */,
 			);
 			path = Numeron;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			files = (
 				2C637FA720A696C9003C5314 /* ViewController.swift in Sources */,
 				2C637FA520A696C9003C5314 /* AppDelegate.swift in Sources */,
+				8CCA4D3620A85B57004D0A47 /* MNISTModel.mlmodel in Sources */,
 				2C637FD320A697F4003C5314 /* CanvasView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FY635R7KCK;
 				INFOPLIST_FILE = Numeron/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = FY635R7KCK;
 				INFOPLIST_FILE = Numeron/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
